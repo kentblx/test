@@ -1,15 +1,14 @@
 name: Docker Pull
-
 on:
   push:
     branches:
       - master
-
 jobs:
   build:
     runs-on: ubuntu-latest
-
     steps:
+    - uses: actions/checkout@v2
+
     - name: Docker Pull
       run: |
-        docker container run --rm -p 8001:3000 -it kentblx/test:v1
+        bash sh02.sh
