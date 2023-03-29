@@ -12,4 +12,7 @@ jobs:
     steps:
     - name: Docker Pull
       run: |
-        bash sh02.sh
+        docker pull kentblx/test:v1
+    - name: Docker container
+      run: |
+        docker container run --rm -p 8001:3000 -it kentblx/test:v1
