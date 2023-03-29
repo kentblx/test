@@ -3,7 +3,7 @@ name: Docker Pull
 on:
   push:
     branches:
-      - main
+      - masster
 
 jobs:
   build:
